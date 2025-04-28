@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Responsiva con Imagen de Fondo</title>
+    <title>Fondo Responsivo Horizontal/Móvil</title>
     <style>
         /* Reset básico */
         body, html {
@@ -13,39 +13,39 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Contenedor principal con imagen de fondo */
+        /* Contenedor de fondo inteligente */
         .background-container {
             background-image: url('casadelamano.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 100vh; /* Altura mínima = 100% del viewport */
+            min-height: 100vh;
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
-            padding: 20px; /* Espacio interno para móviles */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            
+            /* Ajuste mágico para móviles */
+            @media (max-width: 768px) {
+                background-size: contain; /* Muestra la imagen completa sin recortar */
+                background-color: #000; /* Color de fondo para áreas no cubiertas */
+            }
         }
 
-        /* Contenedor del contenido (ajustable) */
+        /* Contenido adaptable */
         .content {
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para legibilidad */
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
             padding: 30px;
             border-radius: 10px;
-            max-width: 800px; /* Ancho máximo en desktop */
-            width: 90%; /* Ancho del 90% en móviles */
-            margin: 0 auto; /* Centrado */
-        }
-
-        /* Media Queries para ajustes específicos */
-        @media (max-width: 768px) {
-            .content {
-                padding: 20px; /* Menos padding en móviles */
-                width: 95%; /* Ocupa más espacio en pantallas pequeñas */
-            }
-            h1 {
-                font-size: 24px; /* Título más pequeño en móviles */
+            max-width: 800px;
+            width: 90%;
+            
+            /* Ajustes para móviles */
+            @media (max-width: 480px) {
+                padding: 15px;
+                margin: 20px 0; /* Espacio extra en móviles */
             }
         }
     </style>
