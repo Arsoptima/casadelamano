@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Text</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #3a2210;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de la Mano</title>
+    <style>
+        /* Reset básico */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Necesario para que ocupe toda la pantalla */
+        }
 
-    h1 {
-      font-size: 48px;
-      margin: 0;
-    }
+        /* Contenedor de la imagen de fondo */
+        .background-container {
+            background-image: url('casadelamano.jpg'); /* Reemplaza con tu imagen */
+            background-size: cover; /* Cubre todo el espacio sin distorsión */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Fondo fijo (opcional) */
+            height: 100vh; /* 100% del viewport height */
+            width: 100vw; /* 100% del viewport width */
+        }
 
-    p {
-      font-size: 24px;
-      margin: 10px 0 0;
-    }
-  </style>
+        /* Contenido superpuesto (opcional) */
+        .content {
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté sobre la imagen */
+            color: white; /* Color del texto para contraste */
+            text-align: center;
+            padding-top: 20%;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-  <h1>mastery carried by lineage</h1>
-  <p>COMMING SOON</p>
+    <div class="background-container">
+    </div>
 </body>
 </html>
